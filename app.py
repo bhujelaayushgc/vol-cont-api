@@ -1,23 +1,33 @@
-from flask import Flask, jsonify
+from flask import Flask, render_template
 
-from volume_module.sound import Sound
+from volume_module.SystemVolume import SystemVolume
 
 app = Flask(__name__)
 
+
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+
 @app.route('/vol-up')
 def vol_up():
-  # Sound.volume_up()
-  Sound.volume_set(50)
-  resp = {
-    "current_vol": Sound.current_volume()
-  }
+    system_vol = SystemVolume()
+    system_vol.vol_up()
+    resp = {
+        "current_vol": system_vol.get_vol()
+    }
+    return resp, 200
 
-  return resp, 200
 
 @app.route('/vol-down')
 def vol_down():
-  Sound.volume_down()
-  return "Hello World", 200
+    system_vol = SystemVolume()
+    system_vol.vol_down()
+    resp = {
+        "current_vol": system_vol.get_vol()
+    }
+    return resp, 200
 
 
 if __name__ == "__main__":
