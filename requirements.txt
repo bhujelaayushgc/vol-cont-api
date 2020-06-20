@@ -1,0 +1,14 @@
+click==7.1.2
+comtypes==1.1.7
+enum34==1.1.10
+Flask==1.1.2
+future==0.18.2
+itsdangerous==1.1.0
+Jinja2==2.11.2
+MarkupSafe==1.1.1
+osascript==2019.4.13
+psutil==5.7.0
+public==2019.4.13
+runcmd==2019.4.13
+temp==2020.4.16
+Werkzeug==1.0.1
