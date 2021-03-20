@@ -4,7 +4,7 @@ enum34==1.1.10
 Flask==1.1.2
 future==0.18.2
 itsdangerous==1.1.0
-Jinja2==2.11.2
+Jinja2==2.11.3
 MarkupSafe==1.1.1
 osascript==2019.4.13
 psutil==5.7.0
